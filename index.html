@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Par ou Ímpar</h1>
+        <form action="" method="get" onsubmit="event.preventDefault(); calcular()">
+            <p>
+                <label for="numero">Digite um número</label>
+                <input type="number" name="numero" id="numero">
+            </p>
+            <p>
+                <input type="submit" value="Calcular">
+                <input type="reset" value="Limpar">
+            </p>
+    </main>
+    <section>
+        <p id="msg">A resposta aparecerá aqui...</p>
+    </section>
+        </form>
+    
+<script>
+    function    calcular()  {
+        let num = Number(numero.value)
+        if (num % 2 == 0) {
+            msg.innerHTML = `O número ${num} é PAR`
+        } else {
+            msg.innerHTML = `O número ${num} é ÍMPAR`
+        }
+    }
+
+</script>
+</body>
+</html>
